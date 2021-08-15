@@ -16,11 +16,3 @@ from rest_framework import status
 from .models import User
 from djoser import views
 
-
-class UserViewSet(views.UserViewSet):
-
-    def get_queryset(self):
-        queryset = User.objects.all()
-        if self.action == "list":
-            queryset = queryset
-        return queryset

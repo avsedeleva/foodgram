@@ -6,5 +6,5 @@ class UserAdmin(admin.ModelAdmin):
     """Управление публикациями в админке."""
 
     list_display = ('pk', 'username', 'email', 'first_name', 'last_name')
-    search_fields = ('username',)
+    search_fields = ('username', 'email')
     empty_value_display = '-empty-'
